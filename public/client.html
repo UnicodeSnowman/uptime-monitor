@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="chart.css">
+    </head>
+    <body>
+        <div id="app">
+            <header>
+                <h1>Uptime Monitor</h1>
+                <div id="status">
+                    <p>
+                        <span>Current Time:</span> 
+                        <span id="time">--:--</span>
+                    </p>
+                    <p>
+                        <span>Current Load:</span> 
+                        <span id="current-load">---</span>
+                    </p>
+                    <p>
+                        <span>Up</span> 
+                        <span id="days-up">---</span>
+                        <span>Days</span>
+                    </p>
+                </div>
+            </header>
+            <div id="chart">
+                <svg id="lineChartSVG" class="lineChart--svg">
+                    <defs>
+                        <linearGradient id="lineChart--gradientBackgroundArea" x1="0" x2="0" y1="0" y2="1">
+                          <stop class="lineChart--gradientBackgroundArea--top" offset="0%" />
+                          <stop class="lineChart--gradientBackgroundArea--bottom" offset="100%" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+        <script src="http://localhost:9292/faye/client.js"></script>
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="chart.js"></script>
+        <script>
+            drawLineChart('chart');
+        </script>
+    </body>
+</html>
