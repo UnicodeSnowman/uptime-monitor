@@ -20,12 +20,18 @@ header #status p {
     margin: 10px;
 }
 
+#alert-message {
+    color: red;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
 body {
   font-size: 14px;
   font-family: sans-serif;
   font-weight: 100;
   background-color: #ccc;
-  background-image: linear-gradient(transparent 50%, rgba(255, 255, 255, 0.5) 25%);
   background-size: 4px 4px;
 }
 body ul {
@@ -94,7 +100,7 @@ body ul, body li {
 
 .lineChart--areaLine {
   fill: none;
-  stroke: #6bb7c7;
+  stroke: #6bb9c9;
   stroke-width: 3;
 }
 
@@ -140,10 +146,6 @@ body ul, body li {
 .lineChart--gradientBackgroundArea--bottom {
   stop-color: #6bb7c7;
   stop-opacity: 0.6;
-}
-
-.lineChart--svg {
-  border: 1px solid #eee;
 }
 
 .lineChart--xAxisTicks .domain, .lineChart--xAxis .domain, .lineChart--yAxisTicks .domain {
